@@ -1,0 +1,25 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/cypress run",
+    "headTest":"npm run test -- --headed",
+    "chromeTest":"npm run test -- --browser chrome",
+    "recordDashboardTest":"npm run test -- --record --key be100e5a-b555-4d01-9065-af013fb119ef --reporter mochawesome",
+    "GreenKartTest": "npm run test -- --spec \"cypress/integration/GreenKart/*\""
+  },
+  "retries": {
+    "runMode": 2,
+    "openMode": 0
+  },
+  "author": "DivyaKrishnappa",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^5.1.0",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^8.1.3",
+    "mochawesome": "^6.1.1"
+  }
+}
